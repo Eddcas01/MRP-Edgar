@@ -1,0 +1,9 @@
+C:\Users\edgar\source\repos\MRP\CapaVistaMRP\bin\Debug\CapaVistaMRP.dll
+C:\Users\edgar\source\repos\MRP\CapaVistaMRP\bin\Debug\CapaVistaMRP.pdb
+C:\Users\edgar\source\repos\MRP\CapaVistaMRP\bin\Debug\CapaModeloMRP.dll
+C:\Users\edgar\source\repos\MRP\CapaVistaMRP\bin\Debug\CapaModeloMRP.pdb
+C:\Users\edgar\source\repos\MRP\CapaVistaMRP\obj\Debug\CapaVistaMRP.csprojAssemblyReference.cache
+C:\Users\edgar\source\repos\MRP\CapaVistaMRP\obj\Debug\CapaVistaMRP.csproj.CoreCompileInputs.cache
+C:\Users\edgar\source\repos\MRP\CapaVistaMRP\obj\Debug\CapaVistaMRP.csproj.CopyComplete
+C:\Users\edgar\source\repos\MRP\CapaVistaMRP\obj\Debug\CapaVistaMRP.dll
+C:\Users\edgar\source\repos\MRP\CapaVistaMRP\obj\Debug\CapaVistaMRP.pdb
