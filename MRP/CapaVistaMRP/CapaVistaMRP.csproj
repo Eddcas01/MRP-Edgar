@@ -33,6 +33,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,13 +43,63 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MDI_MRP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI_MRP.Designer.cs">
+      <DependentUpon>MDI_MRP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ordenProduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ordenProduccion.Designer.cs">
+      <DependentUpon>ordenProduccion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="solicitudSuministro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="solicitudSuministro.Designer.cs">
+      <DependentUpon>solicitudSuministro.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CapaModeloMRP\CapaModeloMRP.csproj">
       <Project>{53634120-d6b8-448a-a6bb-2254dec52a45}</Project>
       <Name>CapaModeloMRP</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MDI_MRP.resx">
+      <DependentUpon>MDI_MRP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ordenProduccion.resx">
+      <DependentUpon>ordenProduccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="solicitudSuministro.resx">
+      <DependentUpon>solicitudSuministro.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\093-hammer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\157-paper-plane.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\159-pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\243-exit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

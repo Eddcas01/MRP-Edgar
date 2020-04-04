@@ -7,3 +7,7 @@ C:\Users\edgar\source\repos\MRP\CapaVistaMRP\obj\Debug\CapaVistaMRP.csproj.CoreC
 C:\Users\edgar\source\repos\MRP\CapaVistaMRP\obj\Debug\CapaVistaMRP.csproj.CopyComplete
 C:\Users\edgar\source\repos\MRP\CapaVistaMRP\obj\Debug\CapaVistaMRP.dll
 C:\Users\edgar\source\repos\MRP\CapaVistaMRP\obj\Debug\CapaVistaMRP.pdb
+C:\Users\edgar\source\repos\MRP\CapaVistaMRP\obj\Debug\CapaVistaMRP.MDI_MRP.resources
+C:\Users\edgar\source\repos\MRP\CapaVistaMRP\obj\Debug\CapaVistaMRP.ordenProduccion.resources
+C:\Users\edgar\source\repos\MRP\CapaVistaMRP\obj\Debug\CapaVistaMRP.csproj.GenerateResource.cache
+C:\Users\edgar\source\repos\MRP\CapaVistaMRP\obj\Debug\CapaVistaMRP.solicitudSuministro.resources
