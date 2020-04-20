@@ -31,6 +31,26 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CapaDatos, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Desktop\Seguridad\CapaDatos\bin\Debug\CapaDatos.dll</HintPath>
+    </Reference>
+    <Reference Include="CapaDeDiseno, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Desktop\Navegador\CapaDeDiseno\bin\Debug\CapaDeDiseno.dll</HintPath>
+    </Reference>
+    <Reference Include="CapaDeLogica">
+      <HintPath>..\..\..\..\Desktop\Navegador\CapaDeDiseno\bin\Debug\CapaDeLogica.dll</HintPath>
+    </Reference>
+    <Reference Include="CapaDiseno">
+      <HintPath>..\..\..\..\Desktop\Seguridad\CapaDiseno\bin\Debug\CapaDiseno.dll</HintPath>
+    </Reference>
+    <Reference Include="CapaVista, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ComboAuto\CapaVista\bin\Debug\CapaVista.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -43,17 +63,71 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="enProcesoDetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="enProcesoDetalle.Designer.cs">
+      <DependentUpon>enProcesoDetalle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mantenimientoInvConfg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mantenimientoInvConfg.Designer.cs">
+      <DependentUpon>mantenimientoInvConfg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mantenimientoInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mantenimientoInventario.Designer.cs">
+      <DependentUpon>mantenimientoInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mantenimientoRecetas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mantenimientoRecetas.Designer.cs">
+      <DependentUpon>mantenimientoRecetas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mantenimientoRegistroEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mantenimientoRegistroEmpleados.Designer.cs">
+      <DependentUpon>mantenimientoRegistroEmpleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="MDI_MRP.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MDI_MRP.Designer.cs">
       <DependentUpon>MDI_MRP.cs</DependentUpon>
     </Compile>
+    <Compile Include="ordenesPendientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ordenesPendientes.Designer.cs">
+      <DependentUpon>ordenesPendientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="ordenProduccion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ordenProduccion.Designer.cs">
       <DependentUpon>ordenProduccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pedidosEspeciales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pedidosEspeciales.Designer.cs">
+      <DependentUpon>pedidosEspeciales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="procesoProduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="procesoProduccion.Designer.cs">
+      <DependentUpon>procesoProduccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="productosProceso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="productosProceso.Designer.cs">
+      <DependentUpon>productosProceso.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -75,11 +149,38 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="enProcesoDetalle.resx">
+      <DependentUpon>enProcesoDetalle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mantenimientoInvConfg.resx">
+      <DependentUpon>mantenimientoInvConfg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mantenimientoInventario.resx">
+      <DependentUpon>mantenimientoInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mantenimientoRecetas.resx">
+      <DependentUpon>mantenimientoRecetas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mantenimientoRegistroEmpleados.resx">
+      <DependentUpon>mantenimientoRegistroEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MDI_MRP.resx">
       <DependentUpon>MDI_MRP.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ordenesPendientes.resx">
+      <DependentUpon>ordenesPendientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ordenProduccion.resx">
       <DependentUpon>ordenProduccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pedidosEspeciales.resx">
+      <DependentUpon>pedidosEspeciales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="procesoProduccion.resx">
+      <DependentUpon>procesoProduccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="productosProceso.resx">
+      <DependentUpon>productosProceso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -100,6 +201,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Icon\243-exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\071-factory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\factory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\manufacture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\180-reload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\083-floppy-disk.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
