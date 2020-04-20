@@ -7,16 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaDiseno;
+using CapaDatos;
 
 namespace CapaVistaMRP
 {
     public partial class MDI_MRP : Form
     {
         private int childFormNumber = 0;
-
+        sentencia sn = new sentencia();
+        string usuarioact;
+        
         public MDI_MRP()
         {
             InitializeComponent();
+          
+           
         }
 
         private void ShowNewForm(object sender, EventArgs e)
@@ -66,15 +72,9 @@ namespace CapaVistaMRP
         {
         }
 
-        private void ToolBarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            toolStrip.Visible = toolBarToolStripMenuItem.Checked;
-        }
+       
 
-        private void StatusBarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            statusStrip.Visible = statusBarToolStripMenuItem.Checked;
-        }
+  
 
         private void CascadeToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -104,9 +104,134 @@ namespace CapaVistaMRP
             }
         }
 
-        private void WindowsMenu_Click(object sender, EventArgs e)
+        private void OrdenesDeProduccionToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+            ordenProduccion frm = new ordenProduccion();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void SolicitudDeSuministrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            solicitudSuministro frm = new solicitudSuministro();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void MantenimientoEmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            mantenimientoRegistroEmpleados frm = new mantenimientoRegistroEmpleados(lblUsuario.Text);
+            frm.MdiParent = this;
+            frm.Show();
+
+        }
+
+        private void MantenimientoRecetasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+            mantenimientoRecetas frm = new mantenimientoRecetas(lblUsuario.Text);
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void MantenimientoProcesosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           procesoProduccion frm = new procesoProduccion();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void OrdenesPendientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void MantenimientoConfiguracionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            mantenimientoInvConfg frm = new mantenimientoInvConfg(lblUsuario.Text);
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void ProductosEnProcesoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void GestionDeProduccionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PedidosEspecialesCRMToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void MantenimientosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OrdenesPendientesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ordenesPendientes frm = new ordenesPendientes();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void ProductosEnProcesoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            productosProceso frm = new productosProceso();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void PedidosEspecialesCRMToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            pedidosEspeciales frm = new pedidosEspeciales("Cliente1");
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void MDI_MRP_Load(object sender, EventArgs e)
+        {
+            frm_login login = new frm_login();
+            login.ShowDialog();
+
+            lblUsuario.Text = login.obtenerNombreUsuario();
+            usuarioact = lblUsuario.Text;
+
+
+
+        }
+
+        private void SeguridadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MDI_Seguridad seguridad = new MDI_Seguridad(lblUsuario.Text);
+            seguridad.lbl_nombreUsuario.Text = lblUsuario.Text;
+            seguridad.ShowDialog();
+            sn.insertarBitacora(lblUsuario.Text, "Ingreso ", "Usuarios");
+        }
+
+        private void ToolStripStatusLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MantenimientoInvetarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            mantenimientoInventario frm = new mantenimientoInventario(lblUsuario.Text);
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void OrdenDeProduccionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ordenProduccion frm = new ordenProduccion();
+            frm.MdiParent = this;
+            frm.Show();
         }
     }
 }
