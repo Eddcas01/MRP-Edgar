@@ -252,6 +252,7 @@ namespace CapaVistaMRP
                         Nud_cantidad.Value = 1;
                         nud_cantidadRinde.Value = 0;
                         nud_rendi.Value = 0;
+                        Cmb_um.Text = vacio;
                         MessageBox.Show("Registro con exito ", "Registrado", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     }
                     else {
