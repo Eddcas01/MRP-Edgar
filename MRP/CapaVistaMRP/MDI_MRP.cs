@@ -19,7 +19,7 @@ namespace CapaVistaMRP
         sentencia sn = new sentencia();
         string usuarioact;
         modelo mo = new modelo();
-        string ql = "select pp.cod_orden as 'codigo orden', pp.fecha_inicio as 'Fecha Inicio', pe.fecha_limite as 'Fecha Limite' from productos_proceso pp inner join produccion_encabezados pe on pp.cod_orden=pp.cod_orden  where pp.estado =1 order by pp.id_prodproc DESC LIMIT 4  ;";
+        string ql = "select pe.cod_orden as 'codigo orden', pp.fecha_inicio as 'Fecha Inicio', pe.fecha_limite as 'Fecha Limite' from productos_proceso pp inner join produccion_encabezados pe on pp.cod_orden=pp.cod_orden  where pp.estado =1 order by pp.id_prodproc DESC LIMIT 4  ;";
         string ql2 = "select cod_opp as 'cod_pendiente', cod_orden as 'codigo orden', fecha_limite as 'Fecha Limite' from ordenes_pendientes where estado = 1 order by cod_opp DESC limit 4 ;";
         string ql3 = "select  cod_orden, costo_total from productos_terminados GROUP by cod_orden  order by cod_orden DESC limit 4 ";
         public MDI_MRP()
