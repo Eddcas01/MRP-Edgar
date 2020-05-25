@@ -78,9 +78,16 @@ namespace CapaVistaMRP
         
                 if (Dgb_pedidosEspeciales.SelectedRows.Count == 1)
                 {
-
+                if (Dgb_pedidosEspeciales.Rows.Count > 1)
+                {
 
                     Dgb_pedidosEspeciales.Rows.RemoveAt(Dgb_pedidosEspeciales.CurrentRow.Index);
+                }
+                else {
+
+                    MessageBox.Show("No se puede ingresar una orden sin productos ", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+                }
                 }
             
           
