@@ -436,5 +436,30 @@ namespace CapaVistaMRP
         {
             Help.ShowHelp(this, "ayuda-MRP/AyudaMRP.chm", "AyudaInicio.html");
         }
+
+        private void ReporteDeProduccionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            reporteProduccion frm = new reporteProduccion();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void ReporteDeCostosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            reporteCostos frm = new reporteCostos();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void CostosProduccionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Polizas.Polizas poliza = new Polizas.Polizas();
+            poliza.Show();
+            poliza.MdiParent = this;
+            poliza.AsignarQuery(
+                "select 'Costos Primo' as cuenta , (SELECT round(sum( DISTINCT cp.costo_unitario_producto),3) from costos_produccion cp where cp.fecha BETWEEN 'FechaI' and 'FechaF')  as debe ,'0' as haber UNION ALL select 'Mano de Obra Directa' as cuenta, (SELECT round(sum(DISTINCT cp.suma_costo_mo), 3) from costos_produccion cp where cp.fecha BETWEEN 'FechaI' and 'FechaF') as debe , '0' as haber UNION ALL select 'Materia Prima' as cuenta , (SELECT round(sum(DISTINCT cp.suma_costo_mp), 3)  from costos_produccion cp where cp.fecha BETWEEN 'FechaI' and 'FechaF') as debe ,'0' as haber UNION ALL  SELECT 'Caja' as cuenta, '0' as debe, round(sum(DISTINCT cp.suma_costo_mp) + SUM(DISTINCT cp.suma_costo_mo) + SUM(DISTINCT cp.costo_unitario_producto), 3) as haber from costos_produccion cp where cp.fecha BETWEEN 'FechaI' and 'FechaF' ; ");
+            poliza.AsignarColores(Color.FromArgb(165, 132, 197), Color.Black);
+            
+        }
     }
 }
